@@ -1,35 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+
+import DrumPad from './DrumPad';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const drumPads = [
+    { label: "Q", audio: '/sounds/clap.mp3' },
+    { label: "W", audio: '/sounds/hihat.mp3' },
+    { label: "E", audio: '/sounds/kick.mp3' },
+    { label: "A", audio: '/sounds/snare-1.mp3' },
+    { label: "S", audio: '/sounds/snare-2.mp3' },
+    { label: "D", audio: '/sounds/snare-3.mp3' }
+  ];
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="drum-machine">
+      <h1>🥁 React Drum Machine</h1>
+      <div className="pad-grid">
+        {drumPads.map((pad, index) => (
+          <DrumPad key={index} label={pad.label} audioSrc={pad.audio} />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
