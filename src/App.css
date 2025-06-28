@@ -11,6 +11,11 @@ body {
 .drum-machine {
     text-align: center;
     padding: 2rem;
+    background-color: rgb(46, 46, 48);
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 1px;
 }
 
 .pad-grid {
@@ -23,7 +28,7 @@ body {
 
 .drum-pad {
     padding: 1rem;
-    background-color: #ff7676;
+    background-color: #f77f7f;
     border: none;
     border-radius: 10px;
     font-size: 1.5rem;
@@ -33,6 +38,6 @@ body {
 }
 
 .drum-pad:hover {
-    background-color: #ff5252;
+    background-color: #fa4e4e;
     transform: scale(1.05);
 }
