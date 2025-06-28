@@ -9,12 +9,12 @@ body {
 }
 
 .drum-machine {
+    margin: 0 auto;
     text-align: center;
     padding: 2rem;
     background-color: rgb(46, 46, 48);
     margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: max-content;
     padding-top: 1px;
 }
 
